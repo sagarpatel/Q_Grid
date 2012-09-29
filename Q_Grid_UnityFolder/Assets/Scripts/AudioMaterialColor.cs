@@ -21,7 +21,7 @@ public class AudioMaterialColor : MonoBehaviour
 		Color tempColor = new Color(audioDirector.colorArray[0], audioDirector.colorArray[1], audioDirector.colorArray[2], audioDirector.colorArray[3]);
 
 
-		renderer.sharedMaterial.color = tempColor;
+		renderer.material.color = tempColor;
 
 
 	}

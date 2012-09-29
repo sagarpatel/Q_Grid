@@ -18,7 +18,12 @@ public class TapInput : MonoBehaviour
 	void Update () 
 	{
 	
-		
+		 foreach (Touch touch in Input.touches)
+		{
+			testPosition = touch.position;
+			transform.position = testPosition;
+		}
+
 
 
 	}
