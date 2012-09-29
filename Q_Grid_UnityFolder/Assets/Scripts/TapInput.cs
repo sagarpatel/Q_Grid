@@ -5,8 +5,9 @@ using System.Collections;
 
 public class TapInput : MonoBehaviour 
 {
-
+	public float zDepth;
 	public Vector3 testPosition;
+	public bool isGUI;
 
 	// Use this for initialization
 	void Start () 
@@ -20,10 +21,14 @@ public class TapInput : MonoBehaviour
 	
 		 foreach (Touch touch in Input.touches)
 		{
-			testPosition = touch.position;
-			transform.position = testPosition;
-		}
+			testPosition = Camera.main.ScreenToWorldPoint(touch.position);
+			testPosition.z = zDepth;
+			if( isGUI == false)
+			{
+				transform.position = testPosition;
+			}
 
+		}
 
 
 	}
