@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
 	void OnDestroy()
 	{
 
-		//GameObject explosion = Instantiate(explosionPrefab) as GameObject;
+		GameObject explosion = (GameObject)Instantiate( explosionPrefab, transform.position, transform.localRotation );
 		//explosion.particleEmitter.emit = true;
 		//explosionPrefab.Play();
 
