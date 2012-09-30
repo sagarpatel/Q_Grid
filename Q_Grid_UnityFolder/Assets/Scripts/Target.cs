@@ -17,4 +17,18 @@ public class Target : MonoBehaviour
 	{
 		transform.Rotate( 0, 0 , rotateRate );
 	}
+
+
+	void OnTriggerEnter(Collider other)
+	{
+
+		if( other.gameObject.tag == "Enemy" )
+		{
+			Debug.Log("Enemy hit target!");
+			Destroy(other.gameObject);
+		}
+
+
+	}
+
 }

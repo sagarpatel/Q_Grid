@@ -23,15 +23,18 @@ public class Enemy : MonoBehaviour
 	void Update () 
 	{
 
-		position += velocity * Time.deltaTime * friction;
-		
+		velocity.x = Mathf.Clamp( velocity.x, -maxVelocity, maxVelocity );
+		velocity.y = Mathf.Clamp( velocity.y, -maxVelocity, maxVelocity );
 
 		Vector3 direction = target.transform.position - transform.position;
 		direction.z = 0; // force 2d movement
 		velocity += direction * speed;
-		velocity = Vector3.ClampMagnitude( velocity, maxVelocity);
+		//velocity = Vector3.ClampMagnitude( velocity, maxVelocity);
+		
 		position += velocity * Time.deltaTime;
 		transform.position = position;
+
+		speed += friction;
 	
 	}
 

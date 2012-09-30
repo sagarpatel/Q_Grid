@@ -40,7 +40,7 @@ public class Cannon : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-
+		
 		if( other.gameObject.name == "TouchCursor" )
 		{
 			Debug.Log("Cannon FIIIIIIIRE");
