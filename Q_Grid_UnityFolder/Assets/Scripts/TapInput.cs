@@ -19,7 +19,7 @@ public class TapInput : MonoBehaviour
 	void Update () 
 	{
 	
-		 foreach (Touch touch in Input.touches)
+		foreach (Touch touch in Input.touches)
 		{
 			testPosition = Camera.main.ScreenToWorldPoint(touch.position);
 			testPosition.z = zDepth;

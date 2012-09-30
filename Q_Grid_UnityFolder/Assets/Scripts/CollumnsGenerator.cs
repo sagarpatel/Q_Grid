@@ -8,7 +8,7 @@ public class CollumnsGenerator : MonoBehaviour
 	public GameObject collumnmObject;
 	public List<GameObject> collumnsList;
 	public int collumnsCount = 10;
-	public int distanceBetweenRows = 10;
+	public float distanceBetweenCollumns = 10;
 
 	// Use this for initialization
 	void Start () 
@@ -26,7 +26,7 @@ public class CollumnsGenerator : MonoBehaviour
 			// set distance between, taking into account scale
 			float tempSize = collumnsList[i].transform.localScale.x;
 			Vector3 tempPosition = collumnsList[i].transform.localPosition;
-			float newX = i * tempSize + i*distanceBetweenRows;
+			float newX = i * tempSize + i*distanceBetweenCollumns;
 			tempPosition.x = newX;
 			collumnsList[i].transform.localPosition = tempPosition;
 
