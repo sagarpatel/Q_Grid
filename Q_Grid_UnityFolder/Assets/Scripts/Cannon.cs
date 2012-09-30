@@ -44,7 +44,7 @@ public class Cannon : MonoBehaviour
 		if( other.gameObject.name == "TouchCursor" )
 		{
 			Debug.Log("Cannon FIIIIIIIRE");
-			Bullet currentBullet = (Bullet)Instantiate(bulletPrefab, transform.position, transform.localRotation);
+			Bullet currentBullet = (Bullet)Instantiate(bulletPrefab, transform.position,  Quaternion.identity);
 
 			currentBullet.transform.Rotate( 0, 0, bulletRotation );
 			currentBullet.position = spawnPosition;
