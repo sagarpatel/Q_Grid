@@ -22,12 +22,12 @@ public class Row : MonoBehaviour
 		Vector3 tempPositionLeft = transform.position;
 		tempPositionLeft.x += transform.localScale.x /positionDivider;
 		cannonLeft.transform.position = tempPositionLeft;
-		//cannonLeft.transform.Rotate( 0, 0, -90 );
+		cannonLeft.transform.Rotate( 0, 0, 180 );
 
 		Vector3 tempPositionRight = transform.position;
 		tempPositionRight.x -= transform.localScale.x /positionDivider;
 		cannonRight.transform.position = tempPositionRight;
-		cannonRight.transform.Rotate( 0, 0, 180 );
+		//cannonRight.transform.Rotate( 0, 0, 180 );
 	
 	}
 	

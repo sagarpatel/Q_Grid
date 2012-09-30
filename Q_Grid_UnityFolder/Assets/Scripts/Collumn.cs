@@ -7,8 +7,8 @@ public class Collumn : MonoBehaviour
 	public GameObject cannonPrefab;
 	public float positionDivider = 3f;
 
-	public GameObject cannonTop;
-	public GameObject cannonBot;
+	GameObject cannonTop;
+	GameObject cannonBot;
 
 
 	// Use this for initialization
