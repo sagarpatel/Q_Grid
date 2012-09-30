@@ -38,7 +38,7 @@ public class CollumnsGenerator : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log("Test IM HEEEEEEEEEER");
+
 	}
 
 

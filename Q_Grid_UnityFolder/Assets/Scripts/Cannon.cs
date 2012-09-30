@@ -24,5 +24,13 @@ public class Cannon : MonoBehaviour
 	}
 
 
+	void OnTriggerEnter(Collider other)
+	{
+
+		Debug.Log("Cannon FIIIIIIIRE");
+
+	}
+
+
 
 }
