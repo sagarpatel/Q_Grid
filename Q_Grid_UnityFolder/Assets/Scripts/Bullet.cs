@@ -10,11 +10,13 @@ public class Bullet : MonoBehaviour
 	public float speed = 1f;
 	public float currentLifeTime;
 	public float maxLifeTime = 8f;
+
+	GameObject target;
 	
 	// Use this for initialization
 	void Start () 
 	{
-		
+		target = GameObject.Find("Target");
 	}
 	
 	
@@ -40,6 +42,8 @@ public class Bullet : MonoBehaviour
 		{
 			Debug.Log("Enemy hit target!");
 			Destroy(other.gameObject);
+
+			target.SendMessage("EnemyKilled");
 		}
 
 

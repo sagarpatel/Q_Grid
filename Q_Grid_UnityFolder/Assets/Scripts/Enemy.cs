@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 	public Vector3 velocity;
 	Vector3 position;
 
+	public ParticleSystem explosionPrefab;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -37,6 +39,16 @@ public class Enemy : MonoBehaviour
 		speed += friction;
 	
 	}
+
+	void OnDestroy()
+	{
+
+		//GameObject explosion = Instantiate(explosionPrefab) as GameObject;
+		//explosion.particleEmitter.emit = true;
+		//explosionPrefab.Play();
+
+	}
+
 
 
 
