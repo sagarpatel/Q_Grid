@@ -50,7 +50,7 @@ public class Cannon : MonoBehaviour
 			currentBullet.position = spawnPosition;
 			currentBullet.velocity = bulletVector;
 
-
+			currentBullet.renderer.material.color = renderer.material.color;
 		}
 
 
