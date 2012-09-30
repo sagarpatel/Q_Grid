@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
 	public Vector3 initialVelocity;
 	public float spawnThreashold = 1f;
 
+	public int rgbaIndex;
+
 	AudioDirector audioDirector;
 
 	// Use this for initialization
@@ -21,12 +23,16 @@ public class EnemySpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		float rgbAverage = audioDirector.rgbAverage;
-		if(rgbAverage > spawnThreashold)
+
+
+		float colorValue = audioDirector.colorArray[rgbaIndex];
+		if(colorValue > spawnThreashold)
 		{
 			Enemy spawnedEnemy = (Enemy)Instantiate( enemyPrefab, transform.position, transform.rotation );
 			spawnedEnemy.velocity = initialVelocity;
 		}
+
+
 	}
 
 
