@@ -30,6 +30,9 @@ public class EnemySpawner : MonoBehaviour
 		{
 			Enemy spawnedEnemy = (Enemy)Instantiate( enemyPrefab, transform.position, transform.rotation );
 			spawnedEnemy.velocity = initialVelocity;
+
+			Color tempColor = new Color(audioDirector.colorArray[0], audioDirector.colorArray[1], audioDirector.colorArray[2], audioDirector.colorArray[3]);
+			spawnedEnemy.renderer.material.color = tempColor;
 		}
 
 
