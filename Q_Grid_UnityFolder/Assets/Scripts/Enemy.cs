@@ -14,12 +14,14 @@ public class Enemy : MonoBehaviour
 	void Start () 
 	{
 		target = GameObject.Find("Target");
+		position = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		Vector3 direction = target.transform.position - transform.position;
+		direction.z = 0; // force 2d movement
 		velocity += direction * speed;
 		position += velocity * Time.deltaTime;
 		transform.position = position;
